@@ -21,7 +21,7 @@ def write_msg_to_db(self,msg):
         # 连接到SQLite数据库
         # 数据库文件是openwrt.db
         # 如果文件不存在，会自动在当前目录创建:
-        conn = sqlite3.connect('db.sqlite3')
+        conn = sqlite3.connect('/usr/src/myapp/socket_web/db.sqlite3')
         # 创建一个Cursor:
         cursor = conn.cursor()
         # # 执行一条SQL语句，创建openwrt表:
