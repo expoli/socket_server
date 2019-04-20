@@ -8,6 +8,7 @@ services:
             - 8000:8000
         volumes:
             - $PWD:/usr/src/myapp:rw
+        restart: always
         command: ["bash","/usr/src/myapp/start.sh"]
         container_name: python_socket
 
