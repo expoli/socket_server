@@ -23,9 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=f69@u_(y!r=+ec5gm^6r=p3nu-0$t83g8)y5-x4aovtpt)(+4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bbs.shuangzu.top',
+                'localhost',
+                'python_socket']
 
 
 # Application definition
