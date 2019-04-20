@@ -1,0 +1,14 @@
+version: '3'
+services:
+    socket:
+        build:
+            context: .
+        volumes:
+            - $PWD:/usr/src/myapp:rw
+        command: ["python3","/usr/src/myapp/socket_server.py"]
+        container_name: python_socket
+
+networks:
+    default:
+        external:
+            name:  sz_web_net
