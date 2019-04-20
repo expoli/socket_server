@@ -3,9 +3,13 @@ services:
     socket:
         build:
             context: .
+        ports:
+            - 9011:9011
+            - 8000:8000
         volumes:
             - $PWD:/usr/src/myapp:rw
-        command: ["python3","/usr/src/myapp/socket_server.py"]
+        restart: always
+        command: ["bash","/usr/src/myapp/start.sh"]
         container_name: python_socket
 
 networks:
